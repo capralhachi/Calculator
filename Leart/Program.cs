@@ -12,27 +12,19 @@ namespace Leart
 				Console.WriteLine("Number 1: ");
 				int userImput1;
 				string number1 = Console.ReadLine();
-				if (int.TryParse(number1, out userImput1))
-					{
-						
-					}
-				else
-				{
-                    Console.WriteLine("Incorrect number!");
-					continue;
-                }
-				Console.WriteLine("Number 2: ");
-				int userImput2;
-				string number2 = Console.ReadLine();
-				if (int.TryParse(number2, out userImput2))
-					{
-					
-					}
-				else
+				if (!int.TryParse(number1, out userImput1))
 				{
 					Console.WriteLine("Incorrect number!");
 					continue;
 				}
+				Console.WriteLine("Number 2: ");
+				int userImput2;
+				string number2 = Console.ReadLine();
+				if (!int.TryParse(number2, out userImput2))
+					{
+					Console.WriteLine("Incorrect number!");
+					continue;
+					}
 				Console.WriteLine("+ - * /: ");
 				char oper = Convert.ToChar(Console.ReadLine());
 				int plus = userImput1 + userImput2;
